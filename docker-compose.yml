@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  winman:
+    image: winman
+    build:
+      context: .\WinMan
+      dockerfile: Dockerfile
+    stdin_open: true
+    tty: true

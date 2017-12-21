@@ -1,0 +1,5 @@
+c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.dll
+c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.pdb
+c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
+c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
+c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb

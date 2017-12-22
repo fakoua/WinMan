@@ -1,10 +1,11 @@
-c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.dll
-c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.pdb
-c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
-c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
-c:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb
 C:\Users\sameh\Source\Repos\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.dll
 C:\Users\sameh\Source\Repos\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.pdb
 C:\Users\sameh\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
 C:\Users\sameh\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
 C:\Users\sameh\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csprojResolveAssemblyReference.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb

@@ -1,27 +1,3 @@
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.csprojResolveAssemblyReference.cache
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.csproj.CoreCompileInputs.cache
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.exe.config
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.exe
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.pdb
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Newtonsoft.Json.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Owin.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Newtonsoft.Json.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.xml
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.exe
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.pdb
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Storage.dll
-c:\users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Storage.pdb
 C:\Users\sameh\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.exe.config
 C:\Users\sameh\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.exe
 C:\Users\sameh\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.pdb
@@ -46,3 +22,38 @@ C:\Users\sameh\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.csprojResolveAssembly
 C:\Users\sameh\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.csproj.CoreCompileInputs.cache
 C:\Users\sameh\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.exe
 C:\Users\sameh\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.csprojResolveAssemblyReference.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.csproj.CoreCompileInputs.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.exe.config
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.exe
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Owin.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Swashbuckle.Core.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WebActivatorEx.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Network.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.OS.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Registry.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Storage.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Network.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.OS.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Registry.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Storage.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.exe
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.pdb

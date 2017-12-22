@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.Storage", "WinMan.St
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2894EC41-D21C-42E5-8791-5ECE7C89A526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.OS", "WinMan.OS\WinMan.OS.csproj", "{6F89999D-02EA-424D-B162-7E0733065BA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.Registry", "WinMan.Registry\WinMan.Registry.csproj", "{CC6F8E49-6DB3-4BAF-BA63-9EDD3A0E2F68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinMan.Network", "WinMan.Network\WinMan.Network.csproj", "{9C74D99D-771F-4FB8-A4F6-F468390DCDDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{2894EC41-D21C-42E5-8791-5ECE7C89A526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2894EC41-D21C-42E5-8791-5ECE7C89A526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2894EC41-D21C-42E5-8791-5ECE7C89A526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F89999D-02EA-424D-B162-7E0733065BA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F89999D-02EA-424D-B162-7E0733065BA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F89999D-02EA-424D-B162-7E0733065BA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F89999D-02EA-424D-B162-7E0733065BA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC6F8E49-6DB3-4BAF-BA63-9EDD3A0E2F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC6F8E49-6DB3-4BAF-BA63-9EDD3A0E2F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC6F8E49-6DB3-4BAF-BA63-9EDD3A0E2F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC6F8E49-6DB3-4BAF-BA63-9EDD3A0E2F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C74D99D-771F-4FB8-A4F6-F468390DCDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C74D99D-771F-4FB8-A4F6-F468390DCDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C74D99D-771F-4FB8-A4F6-F468390DCDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C74D99D-771F-4FB8-A4F6-F468390DCDDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

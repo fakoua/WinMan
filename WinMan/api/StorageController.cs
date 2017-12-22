@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Web.Http;
 using WinMan.Storage.Models;
 
 namespace WinMan.api
 {
-  public class StorageController : ApiController
+    public class StorageController : ApiController
     {
         public IEnumerable<string> Get()
         {
@@ -20,6 +16,13 @@ namespace WinMan.api
         public List<DriveModel> Drives()
         {
             return Storage.Utils.Drives.GetDrives();
+        }
+
+        [HttpGet]
+        public FolderModel Folders(string id)
+        {
+            id = id.Replace("|", "\\");
+            return Storage.Utils.Folders.GetFolder(id);
         }
 
         // GET api/values/5 

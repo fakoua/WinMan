@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WinMan.Storage.Models
+﻿namespace WinMan.Storage.Models
 {
-   public class DriveModel
+    public class DriveModel
     {
         public long AvailableFreeSpace { get; set; }
         public string DriveFormat { get; set; }

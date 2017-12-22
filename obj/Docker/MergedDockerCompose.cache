@@ -5,7 +5,7 @@ networks:
 services:
   winman:
     build:
-      context: C:\Users\sameh\Source\Repos\WinMan\WinMan
+      context: C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan
       dockerfile: Dockerfile
     image: winman
     ports:

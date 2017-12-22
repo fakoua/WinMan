@@ -1,10 +1,7 @@
 ﻿using Owin;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Swashbuckle.Application;
 using System.Web.Http;
+using WinMan.Lib;
 
 namespace WinMan
 {
@@ -19,6 +16,11 @@ namespace WinMan
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { action="get", id = RouteParameter.Optional }
             );
+            config.EnableSwagger(c=>
+            {
+                c.DocumentFilter<LowercaseDocumentFilter>();
+                c.SingleApiVersion("v1", "WinMan");
+            }).EnableSwaggerUi();
 
             appBuilder.UseWebApi(config);
         }

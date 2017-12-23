@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/fakoua/WinMan.svg?branch=master)](https://travis-ci.org/fakoua/WinMan)
+[![Build status](https://ci.appveyor.com/api/projects/status/3tyhjfk8nhnbq6vd?svg=true)](https://ci.appveyor.com/project/fakoua/winman)
 
 # WinMan
 Web Administration for Windows Servers

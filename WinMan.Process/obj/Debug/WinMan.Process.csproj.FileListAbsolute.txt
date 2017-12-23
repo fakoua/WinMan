@@ -1,0 +1,6 @@
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\bin\Debug\WinMan.Process.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\bin\Debug\WinMan.Process.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\obj\Debug\WinMan.Process.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\obj\Debug\WinMan.Process.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\obj\Debug\WinMan.Process.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Process\obj\Debug\WinMan.Process.pdb

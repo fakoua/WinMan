@@ -10,3 +10,9 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Registry\obj\
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csproj.CoreCompileInputs.cache
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\bin\Debug\WinMan.Registry.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\bin\Debug\WinMan.Registry.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.pdb

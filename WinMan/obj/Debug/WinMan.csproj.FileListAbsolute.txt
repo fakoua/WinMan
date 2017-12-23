@@ -57,3 +57,40 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Sys
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Http.WebHost.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.exe
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\obj\Debug\WinMan.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.exe.config
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.exe
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Newtonsoft.Json.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Owin.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Swashbuckle.Core.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WebActivatorEx.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Network.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.OS.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Registry.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Storage.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Network.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.OS.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Registry.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Storage.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.Host.HttpListener.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.Hosting.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Newtonsoft.Json.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.Owin.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.exe
+C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Process.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Process.pdb

@@ -7,7 +7,7 @@ services:
       args:
         source: obj/Docker/empty/
     volumes:
-      - C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan:C:\app
+      - C:\Users\sfako\Source\Repos\WinMan\WinMan:C:\app
       - :C:\remote_debugger:ro
     entrypoint: cmd /c "set DISABLE_PERFORMANCE_DEBUGGER=1 & C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /timeout:2147483646"
     labels:

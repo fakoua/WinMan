@@ -4,3 +4,9 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.OS\obj\Debug\
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csproj.CoreCompileInputs.cache
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.OS\obj\Debug\WinMan.OS.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.OS\obj\Debug\WinMan.OS.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\bin\Debug\WinMan.OS.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\bin\Debug\WinMan.OS.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.pdb

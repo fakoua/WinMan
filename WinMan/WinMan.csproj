@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -30,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>WinMan.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -81,6 +85,7 @@
   <ItemGroup>
     <Compile Include="api\NetworkController.cs" />
     <Compile Include="api\OsController.cs" />
+    <Compile Include="api\ProcessController.cs" />
     <Compile Include="api\RegistryController.cs" />
     <Compile Include="api\StorageController.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
@@ -107,6 +112,10 @@
     <ProjectReference Include="..\WinMan.OS\WinMan.OS.csproj">
       <Project>{6f89999d-02ea-424d-b162-7e0733065ba4}</Project>
       <Name>WinMan.OS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinMan.Process\WinMan.Process.csproj">
+      <Project>{609b3fe1-9aba-43b0-85fe-1a02f4e2ae0d}</Project>
+      <Name>WinMan.Process</Name>
     </ProjectReference>
     <ProjectReference Include="..\WinMan.Registry\WinMan.Registry.csproj">
       <Project>{cc6f8e49-6db3-4baf-ba63-9edd3a0e2f68}</Project>

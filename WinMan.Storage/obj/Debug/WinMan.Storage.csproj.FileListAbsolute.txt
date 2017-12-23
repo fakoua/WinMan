@@ -9,3 +9,9 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\D
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\bin\Debug\WinMan.Storage.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Storage\obj\Debug\WinMan.Storage.pdb

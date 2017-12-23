@@ -4,3 +4,9 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Network\obj\D
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Network\obj\Debug\WinMan.Network.csproj.CoreCompileInputs.cache
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Network\obj\Debug\WinMan.Network.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Network\obj\Debug\WinMan.Network.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\bin\Debug\WinMan.Network.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\bin\Debug\WinMan.Network.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.pdb

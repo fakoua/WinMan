@@ -1,4 +1,6 @@
-﻿using Owin;
+﻿using Microsoft.Owin.FileSystems;
+using Microsoft.Owin.StaticFiles;
+using Owin;
 using Swashbuckle.Application;
 using System.Web.Http;
 using WinMan.Lib;
@@ -22,6 +24,18 @@ namespace WinMan
                 c.SingleApiVersion("v1", "WinMan");
             }).EnableSwaggerUi();
 
+            var physicalFileSystem = new PhysicalFileSystem(@".\wwwroot");
+            var options = new FileServerOptions
+            {
+                EnableDefaultFiles = true,
+                FileSystem = physicalFileSystem
+            };
+            options.StaticFileOptions.FileSystem = physicalFileSystem;
+            options.StaticFileOptions.ServeUnknownFileTypes = true;
+            options.DefaultFilesOptions.DefaultFileNames = new[] { "default.html" };
+            appBuilder.UseFileServer(options);
+
+            appBuilder.UseCompressionModule();
             appBuilder.UseWebApi(config);
         }
     }

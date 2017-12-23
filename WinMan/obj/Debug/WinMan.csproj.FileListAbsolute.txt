@@ -94,3 +94,12 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.exe
 C:\Users\sfako\Source\Repos\WinMan\WinMan\obj\Debug\WinMan.pdb
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Process.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Process.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\FSharp.Core.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Owin.Compression.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\FSharp.Core.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Owin.Compression.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\default.html
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.FileSystems.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.StaticFiles.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.FileSystems.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Microsoft.Owin.StaticFiles.xml

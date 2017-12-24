@@ -42,21 +42,6 @@ namespace WinMan
                 "Default", "{controller}/{action}",
                 new { controller = "Home", action = "Index" });
 
-
-            string viewPathTemplate = "WinMan.Views.{0}";
-            TemplateServiceConfiguration templateConfig = new TemplateServiceConfiguration();
-            templateConfig.Resolver = new DelegateTemplateResolver(name =>
-            {
-                string resourcePath = string.Format(viewPathTemplate, name);
-                var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourcePath);
-                using (StreamReader reader = new StreamReader(stream))
-                {
-                    return reader.ReadToEnd();
-                }
-            });
-            Razor.SetTemplateService(new TemplateService(templateConfig));
-
-
             config.EnableSwagger(c=>
             {
                 c.DocumentFilter<LowercaseDocumentFilter>();

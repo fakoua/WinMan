@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using WinMan.Models;
 using WinMan.Storage.Models;
 
 namespace WinMan.api
@@ -12,17 +13,18 @@ namespace WinMan.api
             return new string[] { "value1", "value2" };
         }
 
+        [Authorize]
         [HttpGet]
         public List<DriveModel> Drives()
         {
             return Storage.Utils.Drives.GetDrives();
         }
 
-        [HttpGet]
-        public FolderModel Folders(string id)
+        [HttpPost]
+        public FolderModel Folders([FromBody]PostFolderModel folder)
         {
-            id = id.Replace("|", "\\");
-            return Storage.Utils.Folders.GetFolder(id);
+            folder.Folder = folder.Folder.Replace("|", "\\");
+            return Storage.Utils.Folders.GetFolder(folder.Folder );
         }
 
         // GET api/values/5 

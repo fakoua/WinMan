@@ -12,9 +12,31 @@
     <link href="/dashboard/css/jquery.loading.min.css" rel="stylesheet">
     <link href="/dashboard/dist/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/dashboard/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/dashboard/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="/dashboard/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" type="text/css" />
     $SectionStyle
 </head>
 <body>
+    <!-- Modal -->
+    <div id="alert" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">WinMan Administration</h4>
+                </div>
+                <div id="alert-body" class="modal-body">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div id="wrapper">
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -351,10 +373,10 @@
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                 $SectionBody
-                </div> 
-                    <!-- /.row -->
+                    $SectionBody
                 </div>
+                <!-- /.row -->
+            </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
@@ -367,6 +389,16 @@
     <script src="/dashboard/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="/dashboard/vendor/metisMenu/metisMenu.min.js"></script>
     <script src="/dashboard/dist/js/sb-admin-2.min.js"></script>
+    <script src="/dashboard/js/jquery-dateFormat.min.js"></script>
+    <script src="/dashboard/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="/dashboard/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="/dashboard/vendor/datatables-responsive/dataTables.responsive.js"></script>
+    <script>
+        function showModal(html) {
+            $('#alert-body').html(html);
+            $("#alert").modal()
+        }
+    </script>
     $SectionScript
 </body>
 </html>

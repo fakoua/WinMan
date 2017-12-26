@@ -16,6 +16,7 @@ namespace WinMan.Storage.Models
         public string Name { get; set; }
         public FolderModel Parent { get; set; }
         public FolderModel Root { get; set; }
+        public string ErrorMessage { get; set; }
 
         public List<FolderModel> Folders { get; set; }
         public List<FileModel > Files { get; set; }

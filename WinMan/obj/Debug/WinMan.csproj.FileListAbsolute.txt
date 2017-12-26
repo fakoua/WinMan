@@ -286,3 +286,6 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\style.min.css
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\throbber.gif
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\jstree.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\jquery-dateFormat.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\split.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\images\vertical.png

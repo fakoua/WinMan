@@ -1,6 +1,33 @@
 ﻿$SectionStyle {
 <link href="/dashboard/css/jstree/style.min.css" rel="stylesheet" />
 <style>
+    .split {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .gutter {
+        background-color: #337ab7;
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+
+        .gutter.gutter-horizontal {
+            cursor: col-resize;
+            background-image: url('/dashboard/images/vertical.png');
+        }
+
+        .gutter.gutter-vertical {
+            cursor: row-resize;
+            background-image: url('../grips/horizontal.png');
+        }
+
+        .split.split-horizontal, .gutter.gutter-horizontal {
+            height: 700px;
+            float: left;
+        }
 
     i.folder {
         font-size: 18px;
@@ -48,11 +75,13 @@
 </style>
 }
 
-<div class="col-md-4">
-    <div id="folder-tree">
+<div id="one" class="split split-horizontal ccol-md-4">
+    <div class="tree-container">
+        <div id="folder-tree">
+        </div>
     </div>
 </div>
-<div class="col-md-8">
+<div id="two" class="split split-horizontal ccol-md-8">
     <div class="drive-container" style="display:none;">
         {{~it :value:index}}
         <div class="drive">
@@ -69,14 +98,22 @@
         </div>
         {{~}}
     </div>
+    <div class="folder-container" style="display:none">
+        
+    </div>
 </div>
 
 $SectionScript {
 <script src="/dashboard/js/doT.min.js"></script>
 <script src="/dashboard/js/jstree.min.js"></script>
+<script src="/dashboard/js/split.min.js"></script>
 <script>
 
     $(document).ready(function () {
+        Split(['#one', '#two'], {
+            sizes: [25, 75]
+        });
+
         loadFolders();
         loadDrives();
     });
@@ -151,9 +188,6 @@ $SectionScript {
                             'stripes': false
                         }
                     },
-                    'sort': function (a, b) {
-                        return this.get_type(a) === this.get_type(b) ? (this.get_text(a) > this.get_text(b) ? 1 : -1) : (this.get_type(a) >= this.get_type(b) ? 1 : -1);
-                    },
                     'contextmenu': {
                         'items': function (node) {
                             var tmp = $.jstree.defaults.contextmenu.items();
@@ -197,7 +231,7 @@ $SectionScript {
                             return name + ' ' + counter;
                         }
                     },
-                    'plugins': ['state', 'dnd', 'sort', 'types', 'contextmenu', 'unique']
+                    'plugins': ['state', 'dnd', 'types', 'contextmenu', 'unique']
                 })
                 .on('delete_node.jstree', function (e, data) {
                     $.get('?operation=delete_node', { 'id': data.node.id })
@@ -245,30 +279,42 @@ $SectionScript {
                 })
                 .on('changed.jstree', function (e, data) {
                     if (data && data.selected && data.selected.length) {
-                        $.get('/api/storage/folders/?operation=get_content&id=' + data.selected.join(':'), function (d) {
-                            if (d && typeof d.type !== 'undefined') {
-                                $('#data .content').hide();
-                                switch (d.type) {
-                                    case 'text':
-                                    case 'txt':
-                                    case 'md':
-                                    case 'htaccess':
-                                    case 'log':
-                                    case 'sql':
-                                    case 'php':
-                                    case 'js':
-                                    case 'json':
-                                    case 'css':
-                                    case 'html':
-                                    case 'png':
-                                    case 'jpg':
-                                    case 'jpeg':
-                                    case 'bmp':
-                                    case 'gif':
-                                    default:
-                                        break;
-                                }
+                        $('#page-wrapper').loading();
+                        $.get('/api/storage/foldercontent/?id=' + data.selected.join(':'), function (d) {
+                            if (d.ErrorMessage != '') {
+                                showModal('<p>' + d.ErrorMessage + '</p>');
                             }
+                            var template = '<table width="100%" class="table table-striped table-bordered table-hover" id="folders-table"><thead><tr><th>Name</th><th>Date</th><th>Type</th><th>Size</th><th>Last Write</th></tr></thead><tbody>$body$</tbody></table>';
+                            var tBody = '';
+                            var rowTemplate = '<tr><td>$name$</td><td>$date$</td><td>$type$</td><td>$size$</td><td>$lastWrite$</td></tr>';
+                            $.each(d.Folders, function (index, value) {
+                                var row = rowTemplate;
+                                row = row.replace('$name$', '<span class="fa fa-folder" aria-hidden="true"></span>&nbsp;&nbsp;'  + value.Name);
+                                row = row.replace('$type$', 'File folder');
+                                row = row.replace('$size$', '');
+                                row = row.replace('$date$', $.format.date(value.CreationTime, "dd/MM/yyyy hh:mm"));
+                                row = row.replace('$lastWrite$', $.format.date(value.LastWriteTime, "dd/MM/yyyy hh:mm"));
+                                tBody = tBody + '\r\n' + row;
+                            });
+
+                            $.each(d.Files, function (index, value) {
+                                var row = rowTemplate;
+                                row = row.replace('$name$', '<span class="fa fa-file-o" aria-hidden="true"></span>&nbsp;&nbsp;' + value.Name);
+                                row = row.replace('$type$', value.Extension);
+                                row = row.replace('$size$', humanFileSize(value.Length, false));
+                                row = row.replace('$date$', $.format.date(value.CreationTime, "dd/MM/yyyy hh:mm"));
+                                row = row.replace('$lastWrite$', $.format.date(value.LastWriteTime, "dd/MM/yyyy hh:mm"));
+                                tBody = tBody + '\r\n' + row;
+                            });
+
+                            var html = template.replace('$body$', tBody);
+                            $('.drive-container').hide();
+                            $('.folder-container').html(html);
+                            $('.folder-container').show();
+                            $('#folders-table').DataTable({
+                                paging: false
+                            });
+                            $('#page-wrapper').loading('stop');
                         });
                     }
                     else {

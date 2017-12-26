@@ -20,6 +20,13 @@ namespace WinMan.api
         }
 
         [HttpGet]
+        public FolderModel FolderContent(string id)
+        {
+            var folders = Storage.Utils.Folders.GetFolder(id);
+            return folders;
+        }
+
+        [HttpGet]
         public List<TreeViewModel> Folders(string id)
         {
             id = id.Replace("|", "\\");

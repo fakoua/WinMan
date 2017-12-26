@@ -274,3 +274,15 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\vendor\rap
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\less\mixins.less
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\less\sb-admin-2.less
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\less\variables.less
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\Account\Login.cshtml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\jquery.rest.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\doT.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\jquery.loading.min.js
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jquery.loading.min.css
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\Common\Template.html
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\FileManager\Index.cshtml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\32px.png
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\40px.png
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\style.min.css
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\css\jstree\throbber.gif
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\js\jstree.min.js

@@ -17,14 +17,14 @@ namespace WinMan.Controllers
         public HttpResponseMessage Index()
         {
             var model = new { Name = "World", Email = "someone@somewhere.com" };
-            return Lib.ViewResolver.GetResponse("Home", "Index.cshtml", model);
+            return Lib.ViewResolver.GetResponse("Home", "Index.cshtml", model, true);
         }
 
         [HttpGet]
         public HttpResponseMessage About()
         {
             var model = new { Name = "Sameh", Email = "someone@somewhere.com" };
-            return Lib.ViewResolver.GetResponse("Home", "About.cshtml", model);
+            return Lib.ViewResolver.GetResponse("Home", "About.cshtml", model, true);
         }
     }
 }

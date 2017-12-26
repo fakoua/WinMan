@@ -1,41 +1,57 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
-
+    <title>WinMan Admin</title>
     <!-- Bootstrap Core CSS -->
     <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
     <!-- MetisMenu CSS -->
     <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
+    <link href="../css/jquery.loading.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-treeview.min.css" rel="stylesheet">
     <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    <style>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        div.drive {
+            padding: 1rem;
+            outline: 1px solid #429CE3;
+            width: 30rem;
+            float: left;
+            cursor: pointer;
+            margin: 0.8rem;
+        }
 
+            div.drive div.progress {
+                margin-bottom: 1px;
+            }
+
+            div.drive div.icon {
+                float: left;
+                width: 64px;
+                height: 64px;
+            }
+
+                div.drive div.icon span {
+                    font-size: 4.5rem;
+                    color: #429CE3;
+                }
+
+            div.drive div.size {
+                color: gray;
+                font: 1.3rem;
+            }
+    </style>
 </head>
-
 <body>
-
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -48,7 +64,6 @@
                 <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
             </div>
             <!-- /.navbar-header -->
-
             <ul class="nav navbar-top-links navbar-right">
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
@@ -245,12 +260,15 @@
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-user">
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li>
+                            <a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
                         </li>
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        <li>
+                            <a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li>
+                            <a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -258,7 +276,6 @@
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
-
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
@@ -366,37 +383,135 @@
             </div>
             <!-- /.navbar-static-side -->
         </nav>
-
         <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Blank</h1>
+                        <h1 class="page-header">File Manager</h1>
                     </div>
-                    <!-- /.col-lg-12 -->
+                    <br />
+                    <button id="btn">Test</button>
+                    <button id="btnFolders">Folders</button>
+                    <br />
+                    <div class="drive-container" style="display:none;">
+                        {{~it :value:index}}
+                        <div class="drive">
+                            <div class="icon">
+                                <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
+                            </div>
+                            <div class="title">{{=value.VolumeLabel}} ({{=value.Name}})</div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="{{=value.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{=value.Percentage}}%;">
+                                    <span class="sr-only">{{=value.Percentage}}% Complete</span>
+                                </div>
+                            </div>
+                            <div class="size">{{=value.RTotalFreeSpace}} free of {{=value.RTotalSize}}</div>
+                        </div>
+                        {{~}}
+                    </div>
+                    <div class="folders-container">
+                        HERER
+                        <div id="folders"></div>
+                    </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
                 </div>
-                <!-- /.row -->
-            </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
-
     </div>
     <!-- /#wrapper -->
-
     <!-- jQuery -->
     <script src="../vendor/jquery/jquery.min.js"></script>
-
+    <script src="../js/jquery.rest.min.js"></script>
+    <script src="../js/doT.min.js"></script>
+    <script src="../js/jquery.loading.min.js"></script>
+    <script src="../js/bootstrap-treeview.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../vendor/metisMenu/metisMenu.min.js"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="../dist/js/sb-admin-2.js"></script>
+   
+    <script>
 
+        var tmp = {
+            text: "Node 1",
+            icon: "glyphicon glyphicon-stop",
+            selectedIcon: "glyphicon glyphicon-stop",
+            color: "#000000",
+            backColor: "#FFFFFF",
+            href: "#node-1",
+            selectable: true,
+            state: {
+                checked: true,
+                disabled: true,
+                expanded: true,
+                selected: true
+            },
+            tags: ['available'],
+            nodes: [
+                {text:"hi"}
+  ]
+        }
+
+        $('#btn').click(function () {
+            loadDrives();
+        });
+
+        $('#btnFolders').click(function () {
+            loadFolders();
+        });
+
+        function loadDrives() {
+            $('#page-wrapper').loading();
+            var client = new $.RestClient('/api/storage/');
+            client.add('drives');
+            client.drives.read().done(function (data) {
+                $.each(data, function (index, value) {
+                    value.RTotalFreeSpace = humanFileSize(value.TotalFreeSpace, false);
+                    value.RTotalSize = humanFileSize(value.TotalSize, false);
+                    var used = value.TotalSize - value.TotalFreeSpace;
+                    var perc = Math.floor((used / value.TotalSize) * 100);
+                    value.Percentage = perc;
+                });
+                var driveTemp = $('.drive-container').html();
+                var templateFunction = doT.template(driveTemp);
+                var html = templateFunction(data);
+                $('.drive-container').html(html);
+                $('.drive-container').show();
+                $('#page-wrapper').loading('stop');
+            });
+        }
+
+        function loadFolders() {
+            $('#page-wrapper').loading();
+            var client = new $.RestClient('/api/storage/');
+            client.add('folders');
+            client.folders.create({ folder: 'c:\\' }).done(function (data) {
+                $('#folders').treeview({ data: tmp });
+                $('#page-wrapper').loading('stop');
+            });
+        }
+
+        function humanFileSize(bytes, si) {
+            var thresh = si ? 1000 : 1024;
+            if (Math.abs(bytes) < thresh) {
+                return bytes + ' B';
+            }
+            var units = si
+                ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+                : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+            var u = -1;
+            do {
+                bytes /= thresh;
+                ++u;
+            } while (Math.abs(bytes) >= thresh && u < units.length - 1);
+            return bytes.toFixed(1) + ' ' + units[u];
+        }
+    </script>
 </body>
-
 </html>

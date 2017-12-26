@@ -6,9 +6,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Http;
+using WinMan.Models;
 
 namespace WinMan.Controllers
 {
@@ -18,12 +20,25 @@ namespace WinMan.Controllers
         [HttpGet]
         public HttpResponseMessage Login()
         {
-            string template = "Hello @Model.Name! Welcome to Web API and Razor!";
-            var result =  Engine.Razor.RunCompile(template, "templateKey", null, new { Name = "World" });
+            var model = new { Name = "World", Email = "someone@somewhere.com" };
+            return Lib.ViewResolver.GetResponse("Account", "Login.cshtml", null, false);
+        }
 
-            var response = new HttpResponseMessage();
-            response.Content = new StringContent(result);
-            response.Content.Headers.ContentType = new MediaTypeHeaderValue("text/html");
+        [HttpPost]
+        public HttpResponseMessage Login([FromBody]LoginModel login)
+        {
+
+            var claims = new List<Claim>();
+            claims.Add(new Claim(ClaimTypes.Name, "Brock"));
+            claims.Add(new Claim(ClaimTypes.Email, "brockallen@gmail.com"));
+            var id = new ClaimsIdentity(claims, "WinMan-Auth");
+
+            var auth = Request.GetOwinContext().Authentication;
+            auth.SignIn(id);
+
+            var uri = Request.RequestUri.Authority;
+            var response = Request.CreateResponse(HttpStatusCode.Moved);
+            response.Headers.Location = new Uri($"http://{uri}/api/storage/drives");
             return response;
         }
     }

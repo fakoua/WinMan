@@ -21,9 +21,9 @@ namespace WinMan
         {
             var cookieAuthOptions = new CookieAuthenticationOptions
             {
-                AuthenticationType ="WinMan-Auth",
+                AuthenticationType = "WinMan-Auth",
                 CookieHttpOnly = true,
-                ExpireTimeSpan = TimeSpan.FromMinutes(60),
+                ExpireTimeSpan = TimeSpan.FromSeconds(5),
                 SlidingExpiration = true,
                 CookieSecure = CookieSecureOption.SameAsRequest,
                 LoginPath = new PathString("/Account/Login")

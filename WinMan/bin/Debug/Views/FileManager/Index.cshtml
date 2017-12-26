@@ -1,0 +1,280 @@
+﻿$SectionStyle {
+<link href="/dashboard/css/jstree/style.min.css" rel="stylesheet" />
+<style>
+
+    i.folder {
+        font-size: 18px;
+        position: relative;
+        display: inline-block;
+        font-family: 'Glyphicons Halflings';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+    }
+
+        i.folder:before {
+            content: "\e118";
+        }
+
+    div.drive {
+        padding: 1rem;
+        outline: 1px solid #429CE3;
+        width: 30rem;
+        float: left;
+        cursor: pointer;
+        margin: 0.8rem;
+    }
+
+        div.drive div.progress {
+            margin-bottom: 1px;
+        }
+
+        div.drive div.icon {
+            float: left;
+            width: 64px;
+            height: 64px;
+        }
+
+            div.drive div.icon span {
+                font-size: 4.5rem;
+                color: #429CE3;
+            }
+
+        div.drive div.size {
+            color: gray;
+            font: 1.3rem;
+        }
+</style>
+}
+
+<div class="col-md-4">
+    <div id="folder-tree">
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="drive-container" style="display:none;">
+        {{~it :value:index}}
+        <div class="drive">
+            <div class="icon">
+                <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
+            </div>
+            <div class="title">{{=value.VolumeLabel}} ({{=value.Name}})</div>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{=value.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{=value.Percentage}}%;">
+                    <span class="sr-only">{{=value.Percentage}}% Complete</span>
+                </div>
+            </div>
+            <div class="size">{{=value.RTotalFreeSpace}} free of {{=value.RTotalSize}}</div>
+        </div>
+        {{~}}
+    </div>
+</div>
+
+$SectionScript {
+<script src="/dashboard/js/doT.min.js"></script>
+<script src="/dashboard/js/jstree.min.js"></script>
+<script>
+
+    $(document).ready(function () {
+        loadFolders();
+        loadDrives();
+    });
+
+        function loadDrives() {
+            $('#page-wrapper').loading();
+            var client = new $.RestClient('/api/storage/');
+            client.add('drives');
+            client.drives.read().done(function (data) {
+                $.each(data, function (index, value) {
+                    value.RTotalFreeSpace = humanFileSize(value.TotalFreeSpace, false);
+                    value.RTotalSize = humanFileSize(value.TotalSize, false);
+                    var used = value.TotalSize - value.TotalFreeSpace;
+                    var perc = Math.floor((used / value.TotalSize) * 100);
+                    value.Percentage = perc;
+                });
+                var driveTemp = $('.drive-container').html();
+                var templateFunction = doT.template(driveTemp);
+                var html = templateFunction(data);
+                $('.drive-container').html(html);
+                $('.drive-container').show();
+                $('#page-wrapper').loading('stop');
+            });
+        }
+
+        function loadFolders() {
+            $('#page-wrapper').loading();
+            var client = new $.RestClient('/api/storage/');
+            client.add('folders');
+            client.folders.create({ folder: 'c:\\' }).done(function (data) {
+                buildFolderTree();
+                $('#page-wrapper').loading('stop');
+            });
+        }
+
+        function humanFileSize(bytes, si) {
+            var thresh = si ? 1000 : 1024;
+            if (Math.abs(bytes) < thresh) {
+                return bytes + ' B';
+            }
+            var units = si
+                ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB']
+                : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+            var u = -1;
+            do {
+                bytes /= thresh;
+                ++u;
+            } while (Math.abs(bytes) >= thresh && u < units.length - 1);
+            return bytes.toFixed(1) + ' ' + units[u];
+        }
+
+        function buildFolderTree() {
+            $('#folder-tree')
+                .jstree({
+                    'core': {
+                        'data': {
+                            'url': '/api/storage/folders',
+                            'data': function (node) {
+                                return { 'id': node.id };
+                            }
+                        },
+                        'check_callback': function (o, n, p, i, m) {
+                            if (m && m.dnd && m.pos !== 'i') { return false; }
+                            if (o === "move_node" || o === "copy_node") {
+                                if (this.get_node(n).parent === this.get_node(p).id) { return false; }
+                            }
+                            return true;
+                        },
+                        'themes': {
+                            'responsive': false,
+                            'variant': 'large',
+                            'stripes': false
+                        }
+                    },
+                    'sort': function (a, b) {
+                        return this.get_type(a) === this.get_type(b) ? (this.get_text(a) > this.get_text(b) ? 1 : -1) : (this.get_type(a) >= this.get_type(b) ? 1 : -1);
+                    },
+                    'contextmenu': {
+                        'items': function (node) {
+                            var tmp = $.jstree.defaults.contextmenu.items();
+                            delete tmp.create.action;
+                            tmp.create.label = "New";
+                            tmp.create.submenu = {
+                                "create_folder": {
+                                    "separator_after": true,
+                                    "label": "Folder",
+                                    "action": function (data) {
+                                        var inst = $.jstree.reference(data.reference),
+                                            obj = inst.get_node(data.reference);
+                                        inst.create_node(obj, { type: "default" }, "last", function (new_node) {
+                                            setTimeout(function () { inst.edit(new_node); }, 0);
+                                        });
+                                    }
+                                },
+                                "create_file": {
+                                    "label": "File",
+                                    "action": function (data) {
+                                        var inst = $.jstree.reference(data.reference),
+                                            obj = inst.get_node(data.reference);
+                                        inst.create_node(obj, { type: "file" }, "last", function (new_node) {
+                                            setTimeout(function () { inst.edit(new_node); }, 0);
+                                        });
+                                    }
+                                }
+                            };
+                            if (this.get_type(node) === "file") {
+                                delete tmp.create;
+                            }
+                            return tmp;
+                        }
+                    },
+                    'types': {
+                        'default': { 'icon': 'folder' },
+                        'file': { 'valid_children': [], 'icon': 'file' }
+                    },
+                    'unique': {
+                        'duplicate': function (name, counter) {
+                            return name + ' ' + counter;
+                        }
+                    },
+                    'plugins': ['state', 'dnd', 'sort', 'types', 'contextmenu', 'unique']
+                })
+                .on('delete_node.jstree', function (e, data) {
+                    $.get('?operation=delete_node', { 'id': data.node.id })
+                        .fail(function () {
+                            data.instance.refresh();
+                        });
+                })
+                .on('create_node.jstree', function (e, data) {
+                    $.get('?operation=create_node', { 'type': data.node.type, 'id': data.node.parent, 'text': data.node.text })
+                        .done(function (d) {
+                            data.instance.set_id(data.node, d.id);
+                        })
+                        .fail(function () {
+                            data.instance.refresh();
+                        });
+                })
+                .on('rename_node.jstree', function (e, data) {
+                    $.get('?operation=rename_node', { 'id': data.node.id, 'text': data.text })
+                        .done(function (d) {
+                            data.instance.set_id(data.node, d.id);
+                        })
+                        .fail(function () {
+                            data.instance.refresh();
+                        });
+                })
+                .on('move_node.jstree', function (e, data) {
+                    $.get('?operation=move_node', { 'id': data.node.id, 'parent': data.parent })
+                        .done(function (d) {
+                            //data.instance.load_node(data.parent);
+                            data.instance.refresh();
+                        })
+                        .fail(function () {
+                            data.instance.refresh();
+                        });
+                })
+                .on('copy_node.jstree', function (e, data) {
+                    $.get('?operation=copy_node', { 'id': data.original.id, 'parent': data.parent })
+                        .done(function (d) {
+                            //data.instance.load_node(data.parent);
+                            data.instance.refresh();
+                        })
+                        .fail(function () {
+                            data.instance.refresh();
+                        });
+                })
+                .on('changed.jstree', function (e, data) {
+                    if (data && data.selected && data.selected.length) {
+                        $.get('/api/storage/folders/?operation=get_content&id=' + data.selected.join(':'), function (d) {
+                            if (d && typeof d.type !== 'undefined') {
+                                $('#data .content').hide();
+                                switch (d.type) {
+                                    case 'text':
+                                    case 'txt':
+                                    case 'md':
+                                    case 'htaccess':
+                                    case 'log':
+                                    case 'sql':
+                                    case 'php':
+                                    case 'js':
+                                    case 'json':
+                                    case 'css':
+                                    case 'html':
+                                    case 'png':
+                                    case 'jpg':
+                                    case 'jpeg':
+                                    case 'bmp':
+                                    case 'gif':
+                                    default:
+                                        break;
+                                }
+                            }
+                        });
+                    }
+                    else {
+                       
+                    }
+                });        }
+
+</script>
+}

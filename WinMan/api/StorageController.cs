@@ -13,11 +13,50 @@ namespace WinMan.api
             return new string[] { "value1", "value2" };
         }
 
-        [Authorize]
         [HttpGet]
         public List<DriveModel> Drives()
         {
             return Storage.Utils.Drives.GetDrives();
+        }
+
+        [HttpGet]
+        public List<TreeViewModel> Folders(string id)
+        {
+            id = id.Replace("|", "\\");
+            if (id=="#")
+            {
+                var drives = Storage.Utils.Drives.GetDrives();
+                var rtnVal = new List<TreeViewModel>();
+                foreach (var drive in drives)
+                {
+                    var node = new TreeViewModel()
+                    {
+                        icon = "folder",
+                        id = drive.Name,
+                        text = drive.Name,
+                        children = true 
+                    };
+                    rtnVal.Add(node);
+                }
+                return rtnVal;
+            } else
+            {
+                var folders = Storage.Utils.Folders.GetFolder(id);
+                var rtnVal = new List<TreeViewModel>();
+                foreach (var folder in folders.Folders)
+                {
+                    var node = new TreeViewModel()
+                    {
+                        icon = "folder",
+                        id = folder.FullName,
+                        text = folder.Name,
+                        children = true 
+                    };
+                    rtnVal.Add(node);
+                }
+                return rtnVal;
+            }
+            
         }
 
         [HttpPost]

@@ -119,15 +119,30 @@ $SectionScript {
 <script src="/dashboard/js/jstree.min.js"></script>
 <script src="/dashboard/js/split.min.js"></script>
 <script>
-
+    
     $(document).ready(function () {
         Split(['#one', '#two'], {
             sizes: [25, 75]
         });
 
+        initPage();
+
         loadFolders();
         loadDrives();
     });
+
+    $(window).on('resize', function () {
+        initPage();
+    });
+
+    function initPage() {
+        var h = window.innerHeight;
+        var headerH = $('nav').height();
+        var restH = h - headerH-10;
+        $('.split.split-horizontal').height(restH);
+        $('.gutter.gutter-horizontal').height(restH);
+        console.log(restH);
+    }
 
         function loadDrives() {
             $('#page-wrapper').loading();
@@ -300,7 +315,8 @@ $SectionScript {
                     else {
                        
                     }
-                });        }
+                });
+        }
 
 </script>
 }

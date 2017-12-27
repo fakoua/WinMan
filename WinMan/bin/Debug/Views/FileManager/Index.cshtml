@@ -1,6 +1,17 @@
 ﻿$SectionStyle {
 <link href="/dashboard/css/jstree/style.min.css" rel="stylesheet" />
 <style>
+    #folder-tree .jstree-container-ul > .jstree-open > .jstree-ocl {
+        background-position: -36px -4px;
+    }
+
+    #folder-tree .jstree-container-ul > .jstree-closed > .jstree-ocl {
+        background-position: -4px -4px;
+    }
+
+    #folder-tree .jstree-container-ul > .jstree-leaf > .jstree-ocl {
+        background: transparent;
+    }
     .split {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
@@ -120,6 +131,7 @@ $SectionScript {
 
         function loadDrives() {
             $('#page-wrapper').loading();
+            $('.folder-container').hide();
             var client = new $.RestClient('/api/storage/');
             client.add('drives');
             client.drives.read().done(function (data) {
@@ -188,50 +200,12 @@ $SectionScript {
                             'stripes': false
                         }
                     },
-                    'contextmenu': {
-                        'items': function (node) {
-                            var tmp = $.jstree.defaults.contextmenu.items();
-                            delete tmp.create.action;
-                            tmp.create.label = "New";
-                            tmp.create.submenu = {
-                                "create_folder": {
-                                    "separator_after": true,
-                                    "label": "Folder",
-                                    "action": function (data) {
-                                        var inst = $.jstree.reference(data.reference),
-                                            obj = inst.get_node(data.reference);
-                                        inst.create_node(obj, { type: "default" }, "last", function (new_node) {
-                                            setTimeout(function () { inst.edit(new_node); }, 0);
-                                        });
-                                    }
-                                },
-                                "create_file": {
-                                    "label": "File",
-                                    "action": function (data) {
-                                        var inst = $.jstree.reference(data.reference),
-                                            obj = inst.get_node(data.reference);
-                                        inst.create_node(obj, { type: "file" }, "last", function (new_node) {
-                                            setTimeout(function () { inst.edit(new_node); }, 0);
-                                        });
-                                    }
-                                }
-                            };
-                            if (this.get_type(node) === "file") {
-                                delete tmp.create;
-                            }
-                            return tmp;
-                        }
-                    },
-                    'types': {
-                        'default': { 'icon': 'folder' },
-                        'file': { 'valid_children': [], 'icon': 'file' }
-                    },
                     'unique': {
                         'duplicate': function (name, counter) {
                             return name + ' ' + counter;
                         }
                     },
-                    'plugins': ['state', 'dnd', 'types', 'contextmenu', 'unique']
+                    'plugins': ['search', 'dnd', 'unique']
                 })
                 .on('delete_node.jstree', function (e, data) {
                     $.get('?operation=delete_node', { 'id': data.node.id })
@@ -279,12 +253,17 @@ $SectionScript {
                 })
                 .on('changed.jstree', function (e, data) {
                     if (data && data.selected && data.selected.length) {
+                        var id = data.selected.join(':');
+                        if (id == '##') {
+                            loadDrives();
+                            return;
+                        }
                         $('#page-wrapper').loading();
                         $.get('/api/storage/foldercontent/?id=' + data.selected.join(':'), function (d) {
                             if (d.ErrorMessage != '') {
                                 showModal('<p>' + d.ErrorMessage + '</p>');
                             }
-                            var template = '<table width="100%" class="table table-striped table-bordered table-hover" id="folders-table"><thead><tr><th>Name</th><th>Date</th><th>Type</th><th>Size</th><th>Last Write</th></tr></thead><tbody>$body$</tbody></table>';
+                            var template = '<table width="100%" class="table table-hover" id="folders-table"><thead><tr><th>Name</th><th>Date</th><th>Type</th><th>Size</th><th>Last Write</th></tr></thead><tbody>$body$</tbody></table>';
                             var tBody = '';
                             var rowTemplate = '<tr><td>$name$</td><td>$date$</td><td>$type$</td><td>$size$</td><td>$lastWrite$</td></tr>';
                             $.each(d.Folders, function (index, value) {
@@ -312,6 +291,7 @@ $SectionScript {
                             $('.folder-container').html(html);
                             $('.folder-container').show();
                             $('#folders-table').DataTable({
+                                "order": [[2, "desc"]],
                                 paging: false
                             });
                             $('#page-wrapper').loading('stop');

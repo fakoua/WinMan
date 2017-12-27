@@ -7,12 +7,7 @@ namespace WinMan.api
 {
     public class StorageController : ApiController
     {
-        public IEnumerable<string> Get()
-        {
-            var drives =  System.IO.DriveInfo.GetDrives();
-            return new string[] { "value1", "value2" };
-        }
-
+       
         [HttpGet]
         public List<DriveModel> Drives()
         {
@@ -30,7 +25,21 @@ namespace WinMan.api
         public List<TreeViewModel> Folders(string id)
         {
             id = id.Replace("|", "\\");
+
             if (id=="#")
+            {
+                var rtnVal = new List<TreeViewModel>();
+                rtnVal.Add(new TreeViewModel()
+                {
+                    children = true,
+                    id = "##",
+                    text = "This Server",
+                    icon = "folder"
+                });
+                return rtnVal;
+            }
+
+            if (id=="##")
             {
                 var drives = Storage.Utils.Drives.GetDrives();
                 var rtnVal = new List<TreeViewModel>();

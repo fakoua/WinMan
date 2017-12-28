@@ -23,7 +23,9 @@ namespace WinMan.Process
                         StartTime = proc.StartTime,
                         TotlaProcessorTime = proc.TotalProcessorTime,
                         UserProcessorTime = proc.UserProcessorTime,
-                        WorkingSet64 = proc.WorkingSet64
+                        WorkingSet64 = proc.WorkingSet64,
+                        PrivateMemorySize64=proc.PrivateMemorySize64,
+                        UserName = proc.StartInfo.UserName
                     };
                     rtnVal.Add(p);
                 }

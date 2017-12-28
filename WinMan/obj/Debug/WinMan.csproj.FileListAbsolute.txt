@@ -486,3 +486,4 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Mic
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Owin.Compression.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\RazorEngine.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Razor.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\ProcessManager\Index.cshtml

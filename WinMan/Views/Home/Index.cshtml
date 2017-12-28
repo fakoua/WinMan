@@ -1,19 +1,70 @@
 ﻿$SectionStyle {
+<style>
+    .tpl {
+        visibility:hidden;
+    }
+</style>
 }
 <h2>W</h2>
-<div class="col-lg-4">
+<div class="col-lg-6">
     <div class="panel panel-primary">
         <div class="panel-heading">
             System Information
         </div>
-        <div class="panel-body">
-            <h5>Windows Edition</h5>
-            <h5>System</h5>
+        <div id="system-info" class="panel-body">
+            <h4>Windows Edition</h4>
+            <span class="tpl">
+                {{=it.OsName}}
+            </span>
+            <h4>System</h4>
+            <div class="tpl">
+                <div class="row">
+                    <div class="col-md-3">Manufacturer:</div>
+                    <div class="col-md-offset-1 col-md-8">Microsoft Corporation</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">System name:</div>
+                    <div class="col-md-offset-1 col-md-8">{{=it.MachineName}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Processor:</div>
+                    <div class="col-md-offset-1 col-md-8">{{=it.Processor}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">Memory (RAM):</div>
+                    <div class="col-md-offset-1 col-md-8">{{=it.Memory}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">System type:</div>
+                    <div class="col-md-offset-1 col-md-8">{{=it.Architecture}}</div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<div class="col-lg-8">
+<div class="col-lg-6">
 
 </div>
 $SectionScript {
+
+<script>
+    $(document).ready(function () {
+        domLoad();
+    });
+
+    function domLoad() {
+        $('#page-wrapper').loading();
+        var client = new $.RestClient('/api/os/');
+        client.add('info');
+        client.info.read().done(function (data) {
+            var tpl = $('#system-info').html();
+            var templateFunction = doT.template(tpl);
+            var html = templateFunction(data);
+            $('#system-info').html(html);
+            $('.tpl').css('visibility', 'visible');
+            $('#page-wrapper').loading('stop');
+        });
+    }
+
+</script>
 }

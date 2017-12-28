@@ -1,0 +1,42 @@
+﻿$SectionStyle {
+
+}
+
+<table id="process-table" class="table table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>PID</th>
+            <th>User name</th>
+            <th>Memory</th>
+        </tr>
+    </thead>
+</table>
+
+$SectionScript {
+<script>
+    $(document).ready(function () {
+        domLoad();
+    });
+
+    function domLoad() {
+        $('#page-wrapper').loading();
+        var client = new $.RestClient('/api/process/');
+        client.add('getprocesses');
+        client.getprocesses.read().done(function (data) {
+            $('#process-table').DataTable({
+                data: data,
+                paging:false,
+                columns: [
+                    { data: "ProcessName"},
+                    { data: "Id" },
+                    { data: "UserName" },
+                    { data: "PrivateMemorySize64"}
+                ]
+            });
+            $('#page-wrapper').loading('stop');
+        });
+    }
+
+</script>
+}

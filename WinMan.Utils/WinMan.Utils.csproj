@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{609B3FE1-9ABA-43B0-85FE-1A02F4E2AE0D}</ProjectGuid>
+    <ProjectGuid>{CBC99002-0853-4C3E-8382-2B0096ABB222}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WinMan.Process</RootNamespace>
-    <AssemblyName>WinMan.Process</AssemblyName>
+    <RootNamespace>WinMan.Utils</RootNamespace>
+    <AssemblyName>WinMan.Utils</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,15 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\ProcessModel.cs" />
+    <Compile Include="Functions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Utils.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WinMan.Utils\WinMan.Utils.csproj">
-      <Project>{cbc99002-0853-4c3e-8382-2b0096abb222}</Project>
-      <Name>WinMan.Utils</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,8 +7,8 @@
         <tr>
             <th>Name</th>
             <th>PID</th>
-            <th>User name</th>
             <th>Memory</th>
+            <th>Memory<sub>Peak</sub></th>
         </tr>
     </thead>
 </table>
@@ -26,12 +26,24 @@ $SectionScript {
         client.getprocesses.read().done(function (data) {
             $('#process-table').DataTable({
                 data: data,
-                paging:false,
+                paging: false,
+                autoWidth: false,
+                dom: 'Bfrtip',
+                buttons: [
+                    {
+                        extend: 'copy',
+                        text: '<u>C</u>opy',
+                        key: {
+                            key: 'c',
+                            altKey: true
+                        }
+                    }
+                ],
                 columns: [
                     { data: "ProcessName"},
                     { data: "Id" },
-                    { data: "UserName" },
-                    { data: "PrivateMemorySize64"}
+                    { data: "WorkingSet64View" },
+                    { data: "PeakWorkingSet64View"}
                 ]
             });
             $('#page-wrapper').loading('stop');

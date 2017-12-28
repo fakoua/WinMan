@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using WinMan.Process.Models;
+using WinMan.Utils;
 
 namespace WinMan.Process
 {
@@ -14,7 +15,7 @@ namespace WinMan.Process
             {
                 try
                 {
-                    var p = new ProcessModel()
+                   var p = new ProcessModel()
                     {
                         Id = proc.Id,
                         MainWindowTitle = proc.MainWindowTitle,
@@ -24,8 +25,9 @@ namespace WinMan.Process
                         TotlaProcessorTime = proc.TotalProcessorTime,
                         UserProcessorTime = proc.UserProcessorTime,
                         WorkingSet64 = proc.WorkingSet64,
-                        PrivateMemorySize64=proc.PrivateMemorySize64,
-                        UserName = proc.StartInfo.UserName
+                        PeakWorkingSet64=proc.PeakWorkingSet64,
+                        PeakWorkingSet64View = Functions.HumanReadableSize(proc.PeakWorkingSet64),
+                        WorkingSet64View = Functions.HumanReadableSize(proc.WorkingSet64)
                     };
                     rtnVal.Add(p);
                 }

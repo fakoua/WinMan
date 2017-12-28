@@ -10,3 +10,5 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\obj\D
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\obj\Debug\WinMan.Process.csproj.CoreCompileInputs.cache
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\obj\Debug\WinMan.Process.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\obj\Debug\WinMan.Process.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\bin\Debug\WinMan.Utils.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Process\bin\Debug\WinMan.Utils.pdb

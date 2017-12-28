@@ -151,6 +151,7 @@
     </None>
     <None Include="Dockerfile" />
     <None Include="packages.config" />
+    <Content Include="snip.txt" />
     <Content Include="Views\Home\Index.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

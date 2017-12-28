@@ -12,7 +12,8 @@ namespace WinMan.Process.Models
         public TimeSpan TotlaProcessorTime { get; set; }
         public TimeSpan UserProcessorTime { get; set; }
         public long WorkingSet64 { get; set; }
-        public long PrivateMemorySize64 { get; set; }
-        public string UserName { get; set; }
+        public long PeakWorkingSet64 { get; set; }
+        public string WorkingSet64View { get; set; }
+        public string PeakWorkingSet64View { get; set; }
     }
 }

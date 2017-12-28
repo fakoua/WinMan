@@ -487,3 +487,6 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Owi
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\RazorEngine.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\System.Web.Razor.xml
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\ProcessManager\Index.cshtml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Views\ProcessManager\Index.cshtml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Utils.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Utils.pdb

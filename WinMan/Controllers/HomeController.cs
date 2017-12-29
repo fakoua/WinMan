@@ -11,6 +11,7 @@ using System.Web.Http;
 
 namespace WinMan.Controllers
 {
+    [Authorize]
     public class HomeController : ApiController
     {
         [HttpGet]

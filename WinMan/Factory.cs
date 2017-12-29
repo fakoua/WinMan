@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinMan
 {
     class Factory
     {
-        private static PerformanceCounter  _processorCounter;
+        public static string PassCode { get; set; }
+
+        private static PerformanceCounter _processorCounter;
+        private static PerformanceCounter _memoryCounter;
 
         public static PerformanceCounter ProcessorCounter {
             get
@@ -23,6 +22,21 @@ namespace WinMan
                     _processorCounter = countersInCategory.First(cnt => cnt.CounterName == "% Processor Time");
                 }
                 return _processorCounter;
+            }
+
+        }
+
+        public static PerformanceCounter MemoryCounter
+        {
+            get
+            {
+                if (_memoryCounter == null)
+                {
+                    _memoryCounter = new PerformanceCounter();
+                    _memoryCounter.CounterName = "% Committed Bytes In Use";
+                    _memoryCounter.CategoryName = "Memory";
+                }
+                return _memoryCounter;
             }
 
         }

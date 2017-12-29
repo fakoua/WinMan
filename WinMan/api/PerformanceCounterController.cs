@@ -13,7 +13,7 @@ namespace WinMan.api
         [HttpGet]
         public PerformanceCounterModel GetPerformanceCounter()
         {
-            return PerformanceCounters.Utils.GetPerformanceCounter(Factory.ProcessorCounter);
+            return PerformanceCounters.Utils.GetPerformanceCounter(Factory.ProcessorCounter, Factory.MemoryCounter);
         }
     }
 }

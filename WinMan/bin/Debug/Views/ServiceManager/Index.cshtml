@@ -1,0 +1,45 @@
+﻿$SectionStyle {
+
+}
+<div class="row">
+    <table id="service-table" class="table table-hover">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Start Type</th>
+                <th>Log On As</th>
+            </tr>
+        </thead>
+    </table>
+    </div>
+    $SectionScript {
+    <script>
+    $(document).ready(function () {
+        domLoad();
+    });
+
+    function domLoad() {
+        $('#page-wrapper').loading();
+        var client = new $.RestClient('/api/services/');
+        client.add('get');
+        client.get.read().done(function (data) {
+            $('#service-table').DataTable({
+                data: data,
+                paging: false,
+                autoWidth: false,
+                columns: [
+                    { data: "DisplayName"},
+                    { data: "DescriptionView" },
+                    { data: "StateView" },
+                    { data: "StartModeView" },
+                    { data: "StartNameView"}
+                ]
+            });
+            $('#page-wrapper').loading('stop');
+        });
+    }
+
+    </script>
+    }

@@ -4,3 +4,9 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.P
 C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.csproj.CoreCompileInputs.cache
 C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\bin\Debug\WinMan.PerformanceCounters.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\bin\Debug\WinMan.PerformanceCounters.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.csprojResolveAssemblyReference.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.csproj.CoreCompileInputs.cache
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.pdb

@@ -4,7 +4,13 @@
 # WinMan
 Web Administration for Windows Servers
 
+# Usage:
 
+- Download and unzip the latest bin from [Latest Bin](https://github.com/fakoua/WinMan/releases/tag/v0.0.0.1).
+- Check the file WinMan.exe.config to change the default passcode (winman).
+- Run WinMan.exe as Administrator.
+- From any browser go to: http://localhost:8000/home
+- NB: Press ENTER twice to exit the application.
 
 ## Contributing to WinMan!
 

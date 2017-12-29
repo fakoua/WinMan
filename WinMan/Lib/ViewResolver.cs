@@ -60,13 +60,20 @@ namespace WinMan.Lib
                 }
             }
 
-            htmlTemplate = htmlTemplate.Replace("$SectionStyle", GetStyle(htmlBody ));
-            htmlTemplate = htmlTemplate.Replace("$SectionScript", GetScript(htmlBody));
-            
-            htmlBody = CleanBody(htmlBody);
-            htmlTemplate = htmlTemplate.Replace("$SectionBody", htmlBody);
-            
-            return htmlTemplate;
+            if (useTemplate )
+            {
+                htmlTemplate = htmlTemplate.Replace("$SectionStyle", GetStyle(htmlBody));
+                htmlTemplate = htmlTemplate.Replace("$SectionScript", GetScript(htmlBody));
+
+                htmlBody = CleanBody(htmlBody);
+                htmlTemplate = htmlTemplate.Replace("$SectionBody", htmlBody);
+
+                return htmlTemplate;
+            }
+            else
+            {
+                return htmlBody;
+            }
         }
 
         public static string AssemblyDirectory

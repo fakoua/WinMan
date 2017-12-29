@@ -95,6 +95,7 @@
       <HintPath>..\packages\Swashbuckle.Core.5.6.0\lib\net40\Swashbuckle.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -128,17 +129,20 @@
     <Compile Include="api\PerformanceCounterController.cs" />
     <Compile Include="api\ProcessController.cs" />
     <Compile Include="api\RegistryController.cs" />
+    <Compile Include="api\ServicesController.cs" />
     <Compile Include="api\StorageController.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FileManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProcessManagerController.cs" />
+    <Compile Include="Controllers\ServiceManagerController.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Lib\LowercaseDocumentFilter.cs" />
     <Compile Include="Lib\ViewResolver.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PostFolderModel.cs" />
+    <Compile Include="Models\ServiceControlModel.cs" />
     <Compile Include="Models\TreeViewModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +177,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\ProcessManager\Index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\ServiceManager\Index.cshtml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="wwwroot\dashboard\less\mixins.less">
@@ -385,6 +392,10 @@
     <ProjectReference Include="..\WinMan.Registry\WinMan.Registry.csproj">
       <Project>{cc6f8e49-6db3-4baf-ba63-9edd3a0e2f68}</Project>
       <Name>WinMan.Registry</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinMan.Services\WinMan.Services.vbproj">
+      <Project>{1e6be279-7f77-429f-80a2-ba684be5ed32}</Project>
+      <Name>WinMan.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\WinMan.Storage\WinMan.Storage.csproj">
       <Project>{25c0baf7-e3db-40a0-b5d0-9cdb4b0d535c}</Project>

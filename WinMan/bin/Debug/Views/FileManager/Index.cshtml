@@ -85,63 +85,63 @@
         }
 </style>
 }
-
-<div id="one" class="split split-horizontal ccol-md-4">
-    <div class="tree-container">
-        <div id="folder-tree">
+<div class="row">
+    <div id="one" class="split split-horizontal ccol-md-4">
+        <div class="tree-container">
+            <div id="folder-tree">
+            </div>
         </div>
     </div>
-</div>
-<div id="two" class="split split-horizontal ccol-md-8">
-    <div class="drive-container" style="display:none;">
-        {{~it :value:index}}
-        <div class="drive">
-            <div class="icon">
-                <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
-            </div>
-            <div class="title">{{=value.VolumeLabel}} ({{=value.Name}})</div>
-            <div class="progress">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{=value.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{=value.Percentage}}%;">
-                    <span class="sr-only">{{=value.Percentage}}% Complete</span>
+    <div id="two" class="split split-horizontal ccol-md-8">
+        <div class="drive-container" style="display:none;">
+            {{~it :value:index}}
+            <div class="drive">
+                <div class="icon">
+                    <span class="glyphicon glyphicon-hdd" aria-hidden="true"></span>
                 </div>
+                <div class="title">{{=value.VolumeLabel}} ({{=value.Name}})</div>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{=value.Percentage}}" aria-valuemin="0" aria-valuemax="100" style="width: {{=value.Percentage}}%;">
+                        <span class="sr-only">{{=value.Percentage}}% Complete</span>
+                    </div>
+                </div>
+                <div class="size">{{=value.RTotalFreeSpace}} free of {{=value.RTotalSize}}</div>
             </div>
-            <div class="size">{{=value.RTotalFreeSpace}} free of {{=value.RTotalSize}}</div>
+            {{~}}
         </div>
-        {{~}}
-    </div>
-    <div class="folder-container" style="display:none">
-        
+        <div class="folder-container" style="display:none">
+
+        </div>
     </div>
 </div>
+    $SectionScript {
+    <script src="/dashboard/js/jstree.min.js"></script>
+    <script src="/dashboard/js/split.min.js"></script>
+    <script>
 
-$SectionScript {
-<script src="/dashboard/js/jstree.min.js"></script>
-<script src="/dashboard/js/split.min.js"></script>
-<script>
-    
-    $(document).ready(function () {
-        Split(['#one', '#two'], {
-            sizes: [25, 75]
+        $(document).ready(function () {
+            Split(['#one', '#two'], {
+                sizes: [25, 75]
+            });
+
+            initPage();
+
+            loadFolders();
+            loadDrives();
         });
 
-        initPage();
+        $(window).on('resize', function () {
+            initPage();
+        });
 
-        loadFolders();
-        loadDrives();
-    });
-
-    $(window).on('resize', function () {
-        initPage();
-    });
-
-    function initPage() {
-        var h = window.innerHeight;
-        var headerH = $('nav').height();
-        var restH = h - headerH-10;
-        $('.split.split-horizontal').height(restH);
-        $('.gutter.gutter-horizontal').height(restH);
-        console.log(restH);
-    }
+        function initPage() {
+            var h = window.innerHeight;
+            var headerH = $('nav').height();
+            var restH = h - headerH - 10;
+            $('.split.split-horizontal').height(restH);
+            $('.gutter.gutter-horizontal').height(restH);
+            console.log(restH);
+        }
 
         function loadDrives() {
             $('#page-wrapper').loading();
@@ -282,7 +282,7 @@ $SectionScript {
                             var rowTemplate = '<tr><td>$name$</td><td>$date$</td><td>$type$</td><td>$size$</td><td>$lastWrite$</td></tr>';
                             $.each(d.Folders, function (index, value) {
                                 var row = rowTemplate;
-                                row = row.replace('$name$', '<span class="fa fa-folder" aria-hidden="true"></span>&nbsp;&nbsp;'  + value.Name);
+                                row = row.replace('$name$', '<span class="fa fa-folder" aria-hidden="true"></span>&nbsp;&nbsp;' + value.Name);
                                 row = row.replace('$type$', 'File folder');
                                 row = row.replace('$size$', '');
                                 row = row.replace('$date$', $.format.date(value.CreationTime, "dd/MM/yyyy hh:mm"));
@@ -312,10 +312,10 @@ $SectionScript {
                         });
                     }
                     else {
-                       
+
                     }
                 });
         }
 
-</script>
-}
+    </script>
+    }

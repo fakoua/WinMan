@@ -23,7 +23,7 @@ namespace WinMan
             {
                 AuthenticationType = "WinMan-Auth",
                 CookieHttpOnly = true,
-                ExpireTimeSpan = TimeSpan.FromSeconds(5),
+                ExpireTimeSpan = TimeSpan.FromMinutes(15),
                 SlidingExpiration = true,
                 CookieSecure = CookieSecureOption.SameAsRequest,
                 LoginPath = new PathString("/Account/Login")

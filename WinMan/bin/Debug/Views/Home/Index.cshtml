@@ -1,61 +1,86 @@
 ﻿$SectionStyle {
 <style>
     .tpl {
-        visibility:hidden;
+        visibility: hidden;
     }
-    #processor {
+
+    #processor, #memory {
         width: 100%;
-        height: 300px;
+        height: 230px;
         font-size: 14px;
         line-height: 1.2em;
     }
 </style>
 }
-<h2>W</h2>
-<div class="col-lg-6">
-    <div class="panel panel-primary">
-        <div class="panel-heading">
-            System Information
-        </div>
-        <div id="system-info" class="panel-body">
-            <h4>Windows Edition</h4>
-            <span class="tpl">
-                {{=it.OsName}}
-            </span>
-            <h4>System</h4>
-            <div class="tpl">
-                <div class="row">
-                    <div class="col-md-3">Manufacturer:</div>
-                    <div class="col-md-offset-1 col-md-8">Microsoft Corporation</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">System name:</div>
-                    <div class="col-md-offset-1 col-md-8">{{=it.MachineName}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">Processor:</div>
-                    <div class="col-md-offset-1 col-md-8">{{=it.Processor}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">Memory (RAM):</div>
-                    <div class="col-md-offset-1 col-md-8">{{=it.Memory}}</div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">System type:</div>
-                    <div class="col-md-offset-1 col-md-8">{{=it.Architecture}}</div>
+<div class="row">
+    <h2>W</h2>
+    <div class="col-lg-6">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                System Information
+            </div>
+            <div id="system-info" class="panel-body">
+                <h3>Windows Edition</h3>
+                <span class="tpl">
+                    {{=it.OsName}}
+                </span>
+                <h3>System</h3>
+                <div class="tpl">
+                    <div class="row">
+                        <div class="col-md-3">Manufacturer:</div>
+                        <div class="col-md-offset-1 col-md-8">Microsoft Corporation</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">System name:</div>
+                        <div class="col-md-offset-1 col-md-8">{{=it.MachineName}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Processor:</div>
+                        <div class="col-md-offset-1 col-md-8">{{=it.Processor}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">Memory (RAM):</div>
+                        <div class="col-md-offset-1 col-md-8">{{=it.Memory}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">System type:</div>
+                        <div class="col-md-offset-1 col-md-8">{{=it.Architecture}}</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="col-lg-6">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                CPU
+            </div>
+            <div class="panel-body">
+                <div id="processor"></div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="col-lg-6">
-    <div id="processor"></div>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                Memory
+            </div>
+            <div class="panel-body">
+                <div id="memory"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        
+    </div>
 </div>
-$SectionScript {
+        $SectionScript {
 
 <script src="/dashboard/vendor/flot/jquery.flot.js"></script>
 <script src="/dashboard/vendor/flot/jquery.flot.spline.js"></script>
-
 <script>
     $(document).ready(function () {
         domLoad();
@@ -76,16 +101,18 @@ $SectionScript {
         });
     }
 
-    var data = [], plot;
+    var dataProcessor = [], dataMemory = [], plotProcessor, plotMemory;
 
     function perfCounters() {
-       
+
         for (var i = 0; i <= 50; i++) {
-            data.push([i, 0]);
+            dataProcessor.push([i, 0]);
+            dataMemory.push([i, 0]);
         }
-        plot = $.plot("#processor", [data], {
+        plotProcessor = $.plot("#processor", [dataProcessor], {
             series: {
                 shadowSize: 0,
+                color: '#2E8CC4',
                 lines: {
                     show: false,
                     lineColor: "blue"
@@ -105,25 +132,57 @@ $SectionScript {
                 show: false
             }
         });
-        updateProcessor();
+
+        plotMemory = $.plot("#memory", [dataMemory], {
+            series: {
+                shadowSize: 0,
+                color: '#9528B4',
+                lines: {
+                    show: false,
+                    lineColor: "blue"
+                },
+                splines: {
+                    show: true,
+                    tension: 0.5,
+                    lineWidth: 1,
+                    fill: .3
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            xaxis: {
+                show: false
+            }
+        });
+        updateCounters();
     }
 
-    function updateProcessor() {
+    function updateCounters() {
         var client = new $.RestClient('/api/performancecounter/');
         client.add('getperformancecounter');
         client.getperformancecounter.read().done(function (d) {
-            data = data.slice(1, 50);
-            data.push([50, d.Processor]);
-            
-            for (var i = 0; i < data.length; i++) {
-                data[i][0] = i;
+            dataProcessor = dataProcessor.slice(1, 50);
+            dataProcessor.push([50, d.Processor]);
+
+            dataMemory = dataMemory.slice(1, 50);
+            dataMemory.push([50, d.Memory]);
+
+            for (var i = 0; i < dataProcessor.length; i++) {
+                dataProcessor[i][0] = i;
+                dataMemory[i][0] = i;
             }
-          
-            plot.setData([data]);
-            plot.draw();
-            window.setTimeout(updateProcessor, 1000);
+
+            plotProcessor.setData([dataProcessor]);
+            plotProcessor.draw();
+
+            plotMemory.setData([dataMemory]);
+            plotMemory.draw();
+
+            window.setTimeout(updateCounters, 1000);
         });
     }
 
 </script>
-}
+        }

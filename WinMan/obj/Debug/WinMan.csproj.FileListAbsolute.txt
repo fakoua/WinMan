@@ -495,3 +495,10 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Utils.pdb
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.PerformanceCounters.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.PerformanceCounters.pdb
 C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\wwwroot\dashboard\vendor\flot\jquery.flot.spline.js
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\wwwroot\dashboard\vendor\flot\jquery.flot.spline.js
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.PerformanceCounters.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.PerformanceCounters.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Services.dll
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Services.pdb
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Services.xml
+C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Views\ServiceManager\Index.cshtml

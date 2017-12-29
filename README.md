@@ -12,6 +12,11 @@ Web Administration for Windows Servers
 - From any browser go to: http://localhost:8000/home
 - NB: Press ENTER twice to exit the application.
 
+## Screenshot:
+
+![WinMan](https://raw.githubusercontent.com/fakoua/WinMan/master/screenshot.png)
+
+
 ## Contributing to WinMan!
 
 Thanks for taking the time to contribute! 

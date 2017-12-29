@@ -3,6 +3,7 @@ using System.Web.Http;
 
 namespace WinMan.Controllers
 {
+    [Authorize]
     public class ServiceManagerController : ApiController
     {
         [HttpGet]

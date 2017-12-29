@@ -8,3 +8,13 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Services\obj\
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Services\obj\Debug\WinMan.Services.dll
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Services\obj\Debug\WinMan.Services.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan.Services\obj\Debug\WinMan.Services.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\bin\Debug\WinMan.Services.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\bin\Debug\WinMan.Services.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\bin\Debug\WinMan.Services.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.Resources.resources
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbproj.GenerateResource.Cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.xml
+C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.pdb

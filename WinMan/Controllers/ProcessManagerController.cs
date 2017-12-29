@@ -8,6 +8,7 @@ using System.Web.Http;
 
 namespace WinMan.Controllers
 {
+    [Authorize]
     public class ProcessManagerController : ApiController
     {
         [HttpGet]

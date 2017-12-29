@@ -502,3 +502,7 @@ C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Win
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Services.pdb
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\WinMan.Services.xml
 C:\Users\sameh\documents\visual studio 2017\Projects\WinMan\WinMan\bin\Debug\Views\ServiceManager\Index.cshtml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\Views\ServiceManager\Index.cshtml
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Services.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Services.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan\bin\Debug\WinMan.Services.xml

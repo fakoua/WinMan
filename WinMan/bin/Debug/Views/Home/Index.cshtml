@@ -3,6 +3,12 @@
     .tpl {
         visibility:hidden;
     }
+    #processor {
+        width: 100%;
+        height: 300px;
+        font-size: 14px;
+        line-height: 1.2em;
+    }
 </style>
 }
 <h2>W</h2>
@@ -43,13 +49,17 @@
     </div>
 </div>
 <div class="col-lg-6">
-
+    <div id="processor"></div>
 </div>
 $SectionScript {
+
+<script src="/dashboard/vendor/flot/jquery.flot.js"></script>
+<script src="/dashboard/vendor/flot/jquery.flot.spline.js"></script>
 
 <script>
     $(document).ready(function () {
         domLoad();
+        perfCounters();
     });
 
     function domLoad() {
@@ -63,6 +73,55 @@ $SectionScript {
             $('#system-info').html(html);
             $('.tpl').css('visibility', 'visible');
             $('#page-wrapper').loading('stop');
+        });
+    }
+
+    var data = [], plot;
+
+    function perfCounters() {
+       
+        for (var i = 0; i <= 50; i++) {
+            data.push([i, 0]);
+        }
+        plot = $.plot("#processor", [data], {
+            series: {
+                shadowSize: 0,
+                lines: {
+                    show: false,
+                    lineColor: "blue"
+                },
+                splines: {
+                    show: true,
+                    tension: 0.5,
+                    lineWidth: 1,
+                    fill: .3
+                }
+            },
+            yaxis: {
+                min: 0,
+                max: 100
+            },
+            xaxis: {
+                show: false
+            }
+        });
+        updateProcessor();
+    }
+
+    function updateProcessor() {
+        var client = new $.RestClient('/api/performancecounter/');
+        client.add('getperformancecounter');
+        client.getperformancecounter.read().done(function (d) {
+            data = data.slice(1, 50);
+            data.push([50, d.Processor]);
+            
+            for (var i = 0; i < data.length; i++) {
+                data[i][0] = i;
+            }
+          
+            plot.setData([data]);
+            plot.draw();
+            window.setTimeout(updateProcessor, 1000);
         });
     }
 

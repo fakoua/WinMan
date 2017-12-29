@@ -125,6 +125,7 @@
   <ItemGroup>
     <Compile Include="api\NetworkController.cs" />
     <Compile Include="api\OsController.cs" />
+    <Compile Include="api\PerformanceCounterController.cs" />
     <Compile Include="api\ProcessController.cs" />
     <Compile Include="api\RegistryController.cs" />
     <Compile Include="api\StorageController.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Controllers\FileManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProcessManagerController.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="Lib\LowercaseDocumentFilter.cs" />
     <Compile Include="Lib\ViewResolver.cs" />
     <Compile Include="Models\LoginModel.cs" />
@@ -243,6 +245,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="wwwroot\dashboard\vendor\datatables\images\Sorting icons.psd">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="wwwroot\dashboard\vendor\flot\jquery.flot.spline.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="wwwroot\dashboard\vendor\font-awesome\css\font-awesome.css.map">
@@ -368,6 +373,10 @@
     <ProjectReference Include="..\WinMan.OS\WinMan.OS.csproj">
       <Project>{6f89999d-02ea-424d-b162-7e0733065ba4}</Project>
       <Name>WinMan.OS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WinMan.PerformanceCounters\WinMan.PerformanceCounters.csproj">
+      <Project>{7b50d414-5f9b-4e93-b88b-9e294b5e930c}</Project>
+      <Name>WinMan.PerformanceCounters</Name>
     </ProjectReference>
     <ProjectReference Include="..\WinMan.Process\WinMan.Process.csproj">
       <Project>{609b3fe1-9aba-43b0-85fe-1a02f4e2ae0d}</Project>

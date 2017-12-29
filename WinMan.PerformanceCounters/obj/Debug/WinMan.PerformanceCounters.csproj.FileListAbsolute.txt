@@ -1,0 +1,6 @@
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\bin\Debug\WinMan.PerformanceCounters.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\bin\Debug\WinMan.PerformanceCounters.pdb
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.csprojResolveAssemblyReference.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.csproj.CoreCompileInputs.cache
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.dll
+C:\Users\sfako\Source\Repos\WinMan\WinMan.PerformanceCounters\obj\Debug\WinMan.PerformanceCounters.pdb

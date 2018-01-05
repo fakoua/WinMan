@@ -4,14 +4,6 @@ using Owin;
 using Swashbuckle.Application;
 using System.Web.Http;
 using WinMan.Lib;
-using Microsoft.Owin.Security.Cookies;
-using System;
-using Microsoft.Owin;
-using RazorEngine.Configuration;
-using RazorEngine.Templating;
-using System.Reflection;
-using System.IO;
-using RazorEngine;
 
 namespace WinMan
 {
@@ -19,17 +11,6 @@ namespace WinMan
     {
         public void Configuration(IAppBuilder appBuilder)
         {
-            var cookieAuthOptions = new CookieAuthenticationOptions
-            {
-                AuthenticationType = "WinMan-Auth",
-                CookieHttpOnly = true,
-                ExpireTimeSpan = TimeSpan.FromMinutes(15),
-                SlidingExpiration = true,
-                CookieSecure = CookieSecureOption.SameAsRequest,
-                LoginPath = new PathString("/Account/Login")
-            };
-            appBuilder.UseCookieAuthentication(cookieAuthOptions);
-
             // Configure Web API for self-host. 
             HttpConfiguration config = new HttpConfiguration();
             config.Routes.MapHttpRoute(
@@ -37,10 +18,6 @@ namespace WinMan
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { action="get", id = RouteParameter.Optional }
             );
-
-            config.Routes.MapHttpRoute(
-                "Default", "{controller}/{action}",
-                new { controller = "Home", action = "Index" });
 
             config.EnableSwagger(c=>
             {

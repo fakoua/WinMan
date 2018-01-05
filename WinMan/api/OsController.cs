@@ -8,7 +8,7 @@ namespace WinMan.api
         [HttpGet]
         public OsModel Info()
         {
-            return OS.Utils.ServerInfo.GetInfo();
+            return OS.Utils.Util.GetInfo();
         }
     }
 }

@@ -8,7 +8,7 @@ namespace WinMan.api
         [HttpGet]
         public KeyModel GetRegistry(string id)
         {
-            return Registry.Utils.Registries.GetRegistry(id);
+            return Registry.Utils.Util.GetRegistry(id);
         }
     }
 }

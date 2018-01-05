@@ -1,0 +1,10 @@
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Utils\bin\Debug\WinMan.Util.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Utils\bin\Debug\WinMan.Util.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Utils\obj\Debug\WinMan.Util.csproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Utils\obj\Debug\WinMan.Util.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Utils\obj\Debug\WinMan.Util.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Util\bin\Debug\WinMan.Util.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Util\bin\Debug\WinMan.Util.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Util\obj\Debug\WinMan.Util.csproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Util\obj\Debug\WinMan.Util.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Util\obj\Debug\WinMan.Util.pdb

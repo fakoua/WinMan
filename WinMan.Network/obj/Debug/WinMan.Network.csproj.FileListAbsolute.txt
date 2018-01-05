@@ -10,3 +10,8 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.cspro
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.csproj.CoreCompileInputs.cache
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Network\obj\Debug\WinMan.Network.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Network\bin\Debug\WinMan.Network.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Network\bin\Debug\WinMan.Network.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Network\obj\Debug\WinMan.Network.csproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Network\obj\Debug\WinMan.Network.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Network\obj\Debug\WinMan.Network.pdb

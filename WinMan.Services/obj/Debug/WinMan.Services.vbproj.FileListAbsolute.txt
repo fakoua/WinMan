@@ -18,3 +18,13 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbp
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.xml
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Services\obj\Debug\WinMan.Services.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\bin\Debug\WinMan.Services.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\bin\Debug\WinMan.Services.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\bin\Debug\WinMan.Services.xml
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbprojResolveAssemblyReference.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.Resources.resources
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbproj.GenerateResource.Cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.vbproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.xml
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Services\obj\Debug\WinMan.Services.pdb

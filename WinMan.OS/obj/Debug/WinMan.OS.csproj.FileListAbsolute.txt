@@ -10,3 +10,8 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csprojResolveAs
 C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csproj.CoreCompileInputs.cache
 C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan.OS\obj\Debug\WinMan.OS.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.OS\bin\Debug\WinMan.OS.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.OS\bin\Debug\WinMan.OS.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.OS\obj\Debug\WinMan.OS.csproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.OS\obj\Debug\WinMan.OS.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.OS\obj\Debug\WinMan.OS.pdb

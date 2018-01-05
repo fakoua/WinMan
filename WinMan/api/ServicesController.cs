@@ -13,43 +13,43 @@ namespace WinMan.api
     {
       public async Task<IEnumerable<ServiceModel>> Get()
         {
-            return await Services.Utils.GetServicesAsync();
+            return await Services.Util.GetServicesAsync();
         }
 
         [HttpGet]
         public async Task<ServiceModel> Details(string id)
         {
-            return await Services.Utils.GetServiceAsync(id);
+            return await Services.Util.GetServiceAsync(id);
         }
 
         [HttpGet]
         public async Task<ExtendedServiceModel> Extended(string id)
         {
-            return await Services.Utils.GetExtendedServiceAsync(id);
+            return await Services.Util.GetExtendedServiceAsync(id);
         }
 
         [HttpPost]
         public string Start([FromBody] ServiceControlModel service)
         {
-            return Services.Utils.ControlService(service.ServiceName, ControlType.StartService).ToString();
+            return Services.Util.ControlService(service.ServiceName, ControlType.StartService).ToString();
         }
 
         [HttpPost]
         public string Stop([FromBody] ServiceControlModel service)
         {
-            return Services.Utils.ControlService(service.ServiceName, ControlType.StopService).ToString();
+            return Services.Util.ControlService(service.ServiceName, ControlType.StopService).ToString();
         }
 
         [HttpPost]
         public string Pause([FromBody] ServiceControlModel service)
         {
-            return Services.Utils.ControlService(service.ServiceName, ControlType.PauseService).ToString();
+            return Services.Util.ControlService(service.ServiceName, ControlType.PauseService).ToString();
         }
 
         [HttpPost]
         public string Resume([FromBody] ServiceControlModel service)
         {
-            return Services.Utils.ControlService(service.ServiceName, ControlType.ResumeService).ToString();
+            return Services.Util.ControlService(service.ServiceName, ControlType.ResumeService).ToString();
         }
     }
 }

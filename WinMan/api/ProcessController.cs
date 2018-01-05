@@ -9,7 +9,7 @@ namespace WinMan.api
         [HttpGet]
         public List<ProcessModel> GetProcesses()
         {
-            return Process.Utils.GetProcesses();
+            return Process.Util.GetProcesses();
         }
     }
 }

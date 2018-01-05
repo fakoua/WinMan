@@ -11,13 +11,13 @@ namespace WinMan.api
         [HttpGet]
         public List<DriveModel> Drives()
         {
-            return Storage.Utils.Drives.GetDrives();
+            return Storage.Util.Drives.GetDrives();
         }
 
         [HttpGet]
         public FolderModel FolderContent(string id)
         {
-            var folders = Storage.Utils.Folders.GetFolder(id);
+            var folders = Storage.Util.Folders.GetFolder(id);
             return folders;
         }
 
@@ -41,7 +41,7 @@ namespace WinMan.api
 
             if (id=="##")
             {
-                var drives = Storage.Utils.Drives.GetDrives();
+                var drives = Storage.Util.Drives.GetDrives();
                 var rtnVal = new List<TreeViewModel>();
                 foreach (var drive in drives)
                 {
@@ -57,7 +57,7 @@ namespace WinMan.api
                 return rtnVal;
             } else
             {
-                var folders = Storage.Utils.Folders.GetFolder(id);
+                var folders = Storage.Util.Folders.GetFolder(id);
                 var rtnVal = new List<TreeViewModel>();
                 foreach (var folder in folders.Folders)
                 {
@@ -79,7 +79,7 @@ namespace WinMan.api
         public FolderModel Folders([FromBody]PostFolderModel folder)
         {
             folder.Folder = folder.Folder.Replace("|", "\\");
-            return Storage.Utils.Folders.GetFolder(folder.Folder );
+            return Storage.Util.Folders.GetFolder(folder.Folder );
         }
 
         // GET api/values/5 

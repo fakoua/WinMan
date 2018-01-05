@@ -9,7 +9,7 @@ namespace WinMan.api
         [HttpGet]
         public List<NICModel> GetNetworks()
         {
-            return Network.Utils.NICs.GetNetworkCards();
+            return Network.Utils.Util.GetNetworkCards();
         }
     }
 }

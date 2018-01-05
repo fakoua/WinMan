@@ -41,8 +41,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\PerformanceCounterModel.cs" />
-    <Compile Include="Utils.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

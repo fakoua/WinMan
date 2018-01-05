@@ -99,7 +99,7 @@ WinMan.Services
  <returns></returns>
  <remarks></remarks>
 </member>
-<member name="M:WinMan.Services.Utils.GetServiceName(System.String)">
+<member name="M:WinMan.Services.Util.GetServiceName(System.String)">
  <summary>
  Retrieve Service name from WMI Path
  Example: \\Computer\root\cimv2:Win32_Service.Name="RpcSs"

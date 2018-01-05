@@ -16,3 +16,8 @@ C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csp
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csproj.CoreCompileInputs.cache
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.dll
 C:\Users\sfako\Source\Repos\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Registry\bin\Debug\WinMan.Registry.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Registry\bin\Debug\WinMan.Registry.pdb
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.csproj.CoreCompileInputs.cache
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.dll
+C:\Users\sameh\.jenkins\workspace\WinMan\WinMan.Registry\obj\Debug\WinMan.Registry.pdb

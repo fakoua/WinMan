@@ -123,14 +123,8 @@
     <Compile Include="api\ServicesController.cs" />
     <Compile Include="api\StorageController.cs" />
     <Compile Include="App_Start\SwaggerConfig.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\FileManagerController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProcessManagerController.cs" />
-    <Compile Include="Controllers\ServiceManagerController.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Lib\LowercaseDocumentFilter.cs" />
-    <Compile Include="Lib\ViewResolver.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\PostFolderModel.cs" />
     <Compile Include="Models\ServiceControlModel.cs" />

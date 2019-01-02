@@ -15,6 +15,7 @@ Web Administration for Windows Servers
 ## Screenshot:
 
 ![WinMan](https://raw.githubusercontent.com/fakoua/WinMan/master/screenshot.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffakoua%2FWinMan.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffakoua%2FWinMan?ref=badge_shield)
 
 
 ## Contributing to WinMan!
@@ -41,3 +42,7 @@ Thanks for taking the time to contribute!
 
 ---
 > Make Windows Server Greate Again.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Ffakoua%2FWinMan.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Ffakoua%2FWinMan?ref=badge_large)

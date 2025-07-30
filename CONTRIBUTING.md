@@ -6,7 +6,7 @@ Thanks for taking the time to contribute!
 ### Recommendations
 
 1. Developers are born not made.
-2. Expericence in Windows System.
+2. Experience in Windows System.
 3. DotNet Framework (C# Recommended)
 4. WMI queries
 5. Networking & Security
